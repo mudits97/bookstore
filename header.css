@@ -1,0 +1,539 @@
+
+
+#wrap > p {
+    width: 300px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 0 20px;
+    font: 20px "Roboto";
+    color: #333;
+    text-align: center;
+}
+#wrap >p:before {
+    position: absolute;
+    display: block;
+    content: '';
+    left: 50%;
+    margin-left: -95px;
+    top: 14px;
+    width: 35px;
+    height: 35px;
+    background:url('book.png');
+    background-size: 100% 100%;
+}
+
+
+#header-wrap {
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+}
+#header {
+    position: relative;
+    max-width: 1300px;
+    margin:  0 auto;
+}
+
+#header ul {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+}
+#header > ul > li {
+    color: #fff;
+    cursor: pointer;
+    font: 15px "Raleway";
+    font-weight: 600;
+    line-height: 50px;
+    padding: 0 20px;
+    transition: ease-in .2s;
+    position: relative;
+    display: inline-block;
+}
+#header > ul > li:hover {
+    background-color: #3334;
+}
+#header > ul > li:hover > ul {
+    display: block;
+}
+#header ul ul {
+    background-color: #fff;
+    position: absolute;
+    z-index: 101;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 10px 19px -15px #333;
+    display: none;
+}
+#header ul ul li {
+    padding: 0px 20px;
+    border-bottom: 1px solid #ddd;
+    color: #444;
+    transition: ease-in .2s;
+    line-height: 50px;
+    width: 200px;
+    display: block;
+}
+#header ul ul li:last-child {
+    border-bottom: 0;
+}
+#header ul ul li:hover {
+    background-color: #eee;
+}
+#header > ul:first-child > li:first-child {
+/*     outline: 1px solid #000; */
+    vertical-align: middle;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    padding: 0 0px;
+}
+#header ul:first-child li:first-child:hover {
+    background-color: transparent;
+}
+#header ul ul ul {
+    position: absolute;
+    left: 100%;
+    display: none;
+    top: 0;
+}
+#header ul ul li:hover ul {
+    display: block;
+}
+
+
+.line {
+/*     outline: 1px solid #000; */
+    transition: all linear .01s;
+    position: absolute;
+    top: 50%;
+    background-color: #000a;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -3px;
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+}
+.line1,.line3 {
+    transition: all linear .2s;
+    position: absolute;
+    display: block;
+    content: '';
+    top: 50%;
+    left: 10px;
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    margin-top: -11px;
+}
+.line3 {
+    margin-top: 5px;
+}
+#header li:first-child:hover .line3,#header li:first-child:hover .line1 {
+    transform: translateX(10px);
+}
+
+
+
+#header-member-options {
+    float: right;
+}
+#header-member-options i {
+    font: 20px "FontAwesome";
+    color: #fff;
+}
+#header-member-options li {
+    padding: 0 10px !important;
+}
+#header-member-options h6 {
+    font: 18px "Raleway";
+    font-weight: 700;
+}
+#header-member-options li:nth-child(5) {
+    padding: 5px 10px !important;
+    border-radius: 5px;
+    background-color: #0004 !important;
+}
+#header-member-options li:nth-child(5):hover {
+    background-color: transparent;
+}
+#header-member-options a {
+    text-decoration: none;
+    font: 15px "Raleway";
+    font-weight: 600;
+    color: #fff;
+}
+#header-cart-icon {
+    padding-right: 10px;
+    position: relative;
+}
+#header-cart-count {
+    position: absolute;
+    top: -6px;
+    right: 0px;
+    color: #fff;
+    background-color: #888;
+    width: 16px;
+    text-align: center;
+    height: 16px;
+    border-radius: 100%;
+    font: 14px "Raleway";
+    font-weight: 600;
+}
+
+
+
+
+
+#side-nav {
+    transition: left ease-in-out .3s;
+    box-shadow: 10px 10px 19px -10px #333;
+    position: absolute;
+    top: 114px;
+    z-index: 101;
+    left: -320px;
+    height:calc(100% - 114px);
+    width: 300px;
+    background-color: #fff;
+}
+#side-nav a {
+    display: block;
+    text-decoration: none;
+    color: #444;
+    font: 20px "Raleway";
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: linear .1s;
+    border-bottom: 1px solid #ddd;
+}
+#side-nav a:hover {
+    color: #111;
+    font-weight: 600;
+}
+
+
+#search-wrap {
+    position: absolute;
+    top: 0;
+    z-index: 130;
+    right: 100%;
+    width: 400px;
+    margin-right: 20px;
+    height: 200px;
+    max-height: 200px;
+    background-color: transparent;
+}
+#search {
+    position: relative;
+    max-width: 1300px;
+    margin: 0px auto;
+}
+#search-result {
+    background-color: #000a;
+    display: block !important;
+    width: 380px;
+    max-height: 200px;
+    position: initial !important;
+    overflow-y: scroll;
+    margin:0 auto;
+    padding: 10px 10px;
+}
+#search > i {
+    display: none;
+    vertical-align: top;
+}
+#search > i:last-child {
+    display: block;
+    font: 29px "FontAwesome";
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    top: 11px;
+}
+#search > input {
+    width: 80%;
+    margin: 0;
+    padding: 13px 20px;
+    display: block;
+    font: 20px "Raleway";
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+}
+.search-book {
+    background-color: #fff;
+    cursor: pointer;
+    height: 100px;
+    width: 340px !important;
+    border: 1px solid #fff;
+    box-shadow: 0 10px 19px -10px #aaa;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+.search-book:hover {
+    box-shadow: 0 10px 19px -10px #666;
+}
+.search-book:hover > div {
+    height: 100%;
+}
+.search-book img {
+    display: inline-block;
+    width: 70px;
+    height: 100px;
+}
+.search-book > div {
+    width: 70%;
+    display: inline-block;
+    transition:  all ease-in-out .2s;
+    overflow: hidden;
+    vertical-align: top;
+}
+.search-book div div {
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+}
+.search-book button {
+    color: #fff;
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    width: 100px;
+    font: 10px "Raleway";
+    cursor: pointer;
+    display: block;
+    margin: 10px 10px 10px;
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+}
+.search-book h6 {
+    font: 13px "Roboto";
+    padding: 5px 10px;
+}
+.search-book p {
+    color: #666;
+    font: 13px "Roboto";
+    padding: 5px 10px;
+}
+#side-nav div {
+    display: none;
+}
+
+
+#notifications li {
+    padding: 20px;
+    box-shadow: none;
+    display: block;
+    font: 16px "Roboto";
+    margin: 0 0 15px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+@media  (max-width:1024px) {
+    #side-nav div {
+        background-color: #f0f0f0;
+        display: block;
+    }
+    #side-nav div > span {
+        cursor: pointer;
+        display: block;
+        font: 20px "Raleway";
+        padding: 10px 20px;
+        border-bottom: 2px solid #aaa;
+    }
+    #side-nav div a {
+        padding-left: 40px !important;
+    }
+    #header ul:first-child li {
+        display: none !important;
+    }
+    #header ul:first-child li:first-child {
+        display: block !important;
+        margin: 5px 10px 3px;
+    }
+    .section-container > div,.section-container > ul {
+        max-width: 80% !important;
+        margin: 0 auto;
+    }
+    .section-container img {
+        padding: 0 !important;
+        height: 100% !important;
+        width: 100% !important;
+    }
+    #preview_image,.book-slide img {
+        height: 270px !important;
+        width: 200px !important;
+    }
+    .book-slide {
+        height: 270px !important;
+    }
+    #profile-wrap img {
+        width: 200px !important;
+    }
+    .section-container form {
+
+    }
+    .section-container form textarea {
+        width: 300px !important;
+    }
+    #side-nav > div > div {
+        position: relative;
+        padding-left: 20px;
+    }
+    #side-nav div div > span:before {
+        position: absolute;
+        content: '\f061';
+        display: block;
+        color: #444;
+        left: 21px;
+        top: 13px;
+        font: 15px "FontAwesome";
+    }
+    #side-nav div div div {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        background-color: #fff;
+        box-shadow: 0 10px 19px -10px #000;
+        width: 300px;
+    }
+    #side-nav {
+        height: initial !important;
+    }
+    #side-nav div div:hover div {
+        display: block;
+    }
+    .download-slide img {
+        width: 103px !important;
+    }
+    #side-nav .hiddenSideNavItem {
+        display: block !important;
+    }
+}
+
+
+
+
+
+
+/* -------- Footer starts here ---------- */
+
+#footer-wrap {
+    box-shadow: 0 -10px 19px -15px #999;
+}
+#footer {
+    font: 17px "Raleway";
+    margin: 0 auto;
+}
+#footer > div {
+    overflow: hidden;
+    padding: 20px;
+}
+#footer > div:last-child,#footer > div:first-child > div {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+#footer > div:last-child {
+    border-radius: 10px 10px 0 0;
+/*     box-shadow: 0 -10px 19px -15px #aaa; */
+    border: 1px solid #bbb;
+    background-color: #eee;
+}
+#footer img {
+    width: 70px;
+    height: 70px;
+    display: block;
+}
+#footer-follow {
+    float: right;
+}
+#footer > div > p {
+    padding: 5px 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+#footer-follow i {
+    vertical-align: top;
+    width: 30px;
+    margin-top: 1px;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+}
+#footer-follow i:hover {
+    color: #0077b5;
+}
+#footer-follow i::before {
+    font: 25px "FontAwesome";
+}
+#footer-follow span  {
+    display: inline-block;
+    padding: 5px;
+}
+#footer > div:first-child {
+    background-color: #fff;
+}
+#footer section {
+    display: inline-block;
+}
+#footer img {
+    margin: 20px 20px;
+    margin-right: 6px;
+    display: inline-block;
+}
+#footer section p {
+    margin-top: 45px;
+    display: inline-block;
+    vertical-align: top;
+    font: 20px "Raleway";
+    font-weight: 600;
+    color: #444;
+}
+#footer>div>div>div {
+    display: inline-block;
+    float: right;
+}
+#footer-links {
+    text-align: right;
+    padding: 20px;
+}
+#footer-links p {
+    font: 16px "Roboto";
+    color: #444;
+    margin-left: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+#footer-links a:hover {
+    color: #222;
+}
+#footer-subscribe {
+    padding: 0 20px 20px;
+    text-align: right;
+}
+#footer-subscribe input {
+    padding: 4px 10px;
+    width: 300px;
+}
+
+/* ------ Footer ends here ----------  */
+
+.section-container h4 {
+    font: 17px "Roboto";
+    text-align: center;
+    color: #444;
+}
+
+
+
+.hiddenSideNavItem {
+    display:none !important;
+}

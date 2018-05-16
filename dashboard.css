@@ -1,0 +1,783 @@
+* {
+    padding:0;
+    box-shadow: none;
+    outline: 0;
+    margin: 0;
+}
+body {
+    overflow-x: hidden;
+}
+
+#wrap {
+    width: 100%;
+}
+#header-wrap {
+    border: 1px solid #eee;
+}
+
+
+#book-details-wrap {
+
+}
+#book-details {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+#book-details h4 {
+    text-align: center;
+    font: 20px "Roboto";
+    color: #444;
+}
+#book-details img {
+    outline: 1px solid #ddd;
+    width: 300px;
+    height: 400px;
+    vertical-align: top;
+    display: inline-block;
+}
+#book-details div {
+    max-width: 50%;
+    padding: 20px;
+}
+#book-details h5 {
+    color: #222;
+    font: 20px "Raleway";
+    font-weight: 600;
+}
+#book-details div p {
+    padding: 0;
+    margin: 15px 0;
+    font: 16px "Raleway";
+    border:0;
+}
+#book-details div p:before,#book-details div p:after {
+    display: none;
+}
+#book-details div span {
+    display: block;
+    color: #444;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font: 15px "Raleway";
+}
+#book-details div {
+    display: inline-block;
+    vertical-align: top;
+}
+#book-details button {
+    background-color: #0077b5;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 0;
+}
+
+
+
+#cart-wrap {
+
+}
+#cart {
+    max-width: 1260px;
+    margin: 20px auto;
+}
+#cart ul {
+    padding-top: 30px;
+    list-style: none;
+}
+#cart li {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    background-color: #eee;
+    width: calc(40.33% - 2px);
+    margin-right: 3%;
+    display: inline-block;
+    transition:  linear .2s;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 19px -15px #333;
+}
+#cart li:nth-child(2n) {
+    margin-left: 0;
+}
+#cart li:nth-child(2n-1) {
+    margin-left: 60px;
+}
+#cart li:hover {
+    box-shadow: 0 10px 19px -10px #666;
+}
+#cart li img {
+    width: 140px;
+    height: 200px;
+    display: inline-block;
+}
+#cart li > div {
+    padding:4px 5px 0;
+    display: inline-block;
+    width: unset;
+    vertical-align: top;
+}
+#cart li > div h6 {
+    font: 18px "Roboto";
+    color: #333;
+    margin: 20px 0 5px;
+}
+#cart li> div p {
+    font: 14px "Roboto";
+    color: #555;
+    margin: 4px 0 0;
+}
+#cart li button {
+    cursor: pointer;
+    padding: 10px 5px !important;
+    border: 0;
+    border-radius: 3px;
+    width: initial;
+    background-color: #0077b5;
+    color: #fff;
+    margin: 5px;
+}
+
+
+
+
+.section-container {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    position: relative;
+}
+.section-container > div,.section-container > ul,.section-container > #cart,.section-container #book-details,.section-container #profile {
+    list-style: none;
+    box-shadow: 0 0 19px -10px #888;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 1060px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.section-container p {
+    font: 20px "Roboto";
+    padding: 10px 0 20px 40px;
+    color: #666;
+    position: relative;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+.section-container p:before {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: -5px;
+    display: block;
+    content: '';
+    width: 60px;
+    border-radius: 5px;
+    height: 10px;
+    background-color: #aaa;
+}
+.section-container p:after {
+    position: absolute;
+    content: '\f02d';
+    display: block;
+    left: 5px;
+    top: 2px;
+    font: 30px "FontAwesome";
+}
+.section-container #book-sell-donate img,.section-container #profile img {
+    width: 250px;
+    vertical-align: top;
+    height: 350px;
+    display: inline-block;
+    padding: 20px;
+    border: 1px dashed #333;
+}
+.section-container #book-sell-donate form,.section-container #profile form {
+    display: inline-block;
+    padding: 0 20px;
+}
+.section-container #book-sell-donate form input,.section-container #profile form input {
+    display: block;
+    width: 300px;
+    padding: 10px 10px;
+    font: 17px "Roboto";
+    transition: linear .2s;
+    border: 2px solid #eee;
+    margin: 0 0 10px;
+}
+.section-container #book-sell-donate select {
+    display: inline-block;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+}
+.section-container #book-sell-donate textarea,.section-container #profile textarea {
+    padding: 10px;
+    border: 2px solid #eee;
+    transition: linear .2s;
+    width: 400px;
+    resize: none;
+    font: 17px "Roboto";
+    height: 100px;
+    margin: 0 0 10px;
+}
+.section-container input:focus,.section-container textarea:focus {
+    border-color: #625EB1 !important;
+}
+.section-container #book-sell-donate span,.section-container #profile span {
+    display: block;
+    font: 15px "Roboto";
+    color: #444;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.section-container input[type=submit] {
+    cursor: pointer;
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    transition: linear .2s;
+    box-shadow: 0 10px 19px -10px #888;
+}
+.section-container input[type=submit]:hover {
+    box-shadow: 0 10px 19px -10px #333;
+}
+.section-container ul li {
+    cursor: pointer;
+    box-shadow: 0 10px 19px -10px #666;
+    position: relative;
+    margin-bottom: 50px;
+    overflow: hidden;
+    margin-right: 30px;
+    display: inline-block;
+    vertical-align: top;
+}
+.section-container ul li:hover {
+    box-shadow: 0 10px 19px -10px #333;    
+}
+.section-container ul li:nth-child(4n-2) {
+    margin-left: 80px;
+}
+.section-container li img {
+    display: inline-block;
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    width: 200px;
+    height: 280px;
+}
+.section-container li > div {
+    position: absolute;
+    transition: ease-in-out .1s;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: #333a;
+}
+.section-container li:hover > div {
+    height: 100%;
+}
+.section-container li div div {
+    box-shadow: 0 -10px 19px -10px #333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+}
+.section-container li h6 {
+    font: 16px "Raleway";
+    padding: 5px;
+    margin-top: 5px;
+    font-weight: 600;
+    color: #444;
+}
+.section-container li p {
+    border: 0;
+    margin: 0 0 10px;
+    font: 13px "Raleway";
+    padding: 5px;
+}
+.section-container li p:before,.section-container li p:after{
+    display: none;
+}
+.section-container li button {
+    width: 80%;
+    cursor: pointer;
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    color: #fff;
+    border: 0;
+    padding: 10px 0;
+    display: block;
+    border-radius: 4px;
+    margin: 0 auto 10px;
+}
+
+
+#cart div {
+    position: initial;
+    height: initial;
+    width: initial;
+    background-color: transparent;
+}
+
+#category-list ul {
+}
+#category-list li {
+    /*! text-align: center; */
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    height: 100px;
+    margin-top: 20px;
+    margin-right: 5%;
+    font: 18px "Raleway";
+    transition: all ease-in-out .2s;
+    line-height: 100px;
+    border-radius: 3px;
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    color: #fff;
+    box-shadow: 0 10px 19px -15px #aaa;
+}
+/* #category-list li:nth-child(4n) {
+    margin-right: 0;
+} */
+#category-list li:hover {
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    color: #fff;
+}
+
+
+#category-book-slider ul li:nth-child(4n-2) {
+    margin-left: 0px !important;
+}
+
+
+#profile-completion-warning {
+    position: absolute;
+    left: 50%;
+    z-index:1000;
+    padding: 10px 20px;
+    background-color: #444;
+    font: 15px "Raleway";
+    text-align: center;
+    width: 500px;
+    top: 185px;
+    box-shadow: 0 10px 19px -10px #888;
+    color: #fff;
+    border-radius: 20px;
+    margin-left: -250px;
+}
+
+
+
+#requests li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    box-shadow: none;
+}
+#requests li img {
+    width: 150px;
+    height: 200px;
+}
+#requests div {
+    padding: 20px;
+    position: initial;
+    height: unset;
+    width: unset;
+    background-color: unset;
+    display: inline-block;
+    vertical-align: top;
+    width: 80%;
+}
+
+#requests ul li:nth-child(4n-2) {
+    margin: 0;
+    padding: 0;
+}
+#requests section {
+    margin-top: 20px;
+}
+#requests button {
+    display: inline-block;
+    width: 200px;
+    margin-right: 20px;
+}
+#requests div p {
+    margin: 0;
+}
+
+
+
+
+
+#notifications li {
+    border-bottom: 0;
+    width: 94%;
+    padding: 20px 2% 20px 4% !important;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 10px 19px -15px #aaa !important;
+    margin-bottom: 10px;
+}
+#notifications li:before {
+    position: absolute;
+    left: 18px;
+    top: 17px;
+    color: #666;
+    font: 20px "FontAwesome";
+    content: '\f067';
+}
+#notifications li.neg:before {
+    content: '\f068';
+}
+#notifications ul li:nth-child(4n-2) {
+    margin:0 0 15px;
+}
+#notifications p:after {
+    content: '\f0f3';
+    font-size: 24px;
+    top: 7px;
+}
+
+#category-book-filter {
+    border-right: 1px solid #ddd;
+    margin-right: 30px;
+    float: left;
+    border-radius: 5px;
+    width: 300px;
+}
+#category-list {
+    display: inline-block;
+    width: 70%;
+    
+}
+#category-list-wrap {
+    overflow: hidden;
+    max-width: 1250px;
+}
+#category-book-filter ul {
+    list-style: none;    
+}
+#category-book-filter li {
+    display:block;
+    padding: 10px 20px;
+    margin: 0;
+    box-shadow: none;
+}
+#category-book-filter span {
+    color: #222;
+    display: inline-block;
+    font: 15px "Raleway";
+    font-weight: 600;
+    width: 70px;
+}
+#category-book-filter select {
+    width: 150px;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    border-radius: 3px;
+    color: #333;
+    padding: 5px 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+#category-book-filter li:before {
+    position: absolute;
+    right: 40px;
+    z-index: 10;
+    top:16px;
+    display: block;
+    content: '\f107';
+    color: #777;
+    font: 20px "FontAwesome";
+}
+#category-book-filter p {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0px 20px 55px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+#category-book-filter p:before {
+    display: none;
+}
+#category-book-filter p:after {
+    top: 14px;
+    left: 20px;
+    content: '\f0b0';
+}
+#category-list-wrap div:last-child p {
+    margin-top: 8px;
+}
+#category-book-filter button {
+    padding: 10px 20px;
+    margin: 10px auto 20px;
+    display: block;
+    border: 0;
+    border-radius: 3px;
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    color: #fff;
+}
+#category-list .book-slide {
+    height: 280px;
+    width: 200px;
+}
+#category-book-slider {
+    width: 73%;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+#category-book-slider ul {
+    box-shadow: none;
+    margin: 0;
+}
+
+#uploadNewContent {
+    position: absolute;
+    top: 75px;
+    cursor: pointer;
+    z-index: 100;
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    color: #fff;
+    border: 0;
+    transition: .2s;
+    border-radius: 3px;
+    padding: 10px;
+    right: 100px;
+}
+#uploadNewContent:hover {
+    box-shadow: 0 10px 19px -10px #aaa;
+}
+
+
+.download-slide {
+    text-align: left !important;
+    background-image: initial !important;
+    background-color: #f0f0f0;
+    width: initial !important;
+    display: block !important;
+}
+.download-slide img {
+    float: left;
+    width: 100px !important;
+    height: 100px !important;
+    margin-right: 10px;
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);    
+}
+.download-slide div {
+    text-align: left;
+    position: initial !important;
+    left: initial !important;
+}
+.download-slide > div {
+    height: initial !important;
+    text-align: left !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+    display: inline-block;
+    width: initial !important;
+}
+.download-slide div div {
+    background-color: transparent !important;
+    vertical-align: top;
+    height: initial !important;
+    box-shadow: none !important;
+    position: initial !important;
+    width: initial !important;
+    display: inline-block;
+    float: left;
+}
+.download-slide a {
+    text-decoration: none;
+    color: #fff;
+    font: 16px "Raleway";
+    text-align: center;
+    position: absolute;
+    left: 0px;
+    line-height: 48px;
+    top: 0px;
+    background-image: none !important;
+    background-color: transparent !important;
+    width: initial !important;
+    margin: 5px 5px 0 !important;
+    padding: 35px 0px 5px !important;
+    width: 90px !important;
+    border: 1px solid #eee !important;
+}
+.download-slide a:before {
+    position: absolute;
+    left: 50%;
+    margin-left: -9px;
+    top: 26px;
+    content: '\f019';
+    display: block;
+    font: 20px "FontAwesome";
+}
+.download-slide a:hover {
+    background-color: #0003 !important;
+}
+.download-slide h6 {
+    margin: 5px 0 0 !important;
+    font-size: 14px !important;
+}
+.download-slide p {
+    padding: 0 5px !important;
+    margin: 0 !important;
+}
+
+
+
+
+#uploadrequests-wrap {
+    
+}
+#uploadrequests-wrap > div > div {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 70px;
+    display: block;
+}
+#uploadrequests-wrap > div > div:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+#uploadrequests-wrap > div > div:before {
+    position: absolute;
+    content: '\f15b';
+    color: #aaa;
+    display: block;
+    left: 5px;
+    top: 15px;
+    font: 40px "FontAwesome";
+}
+#uploadrequests-wrap h6 {
+    color: #333;
+    font: 16px "Raleway";
+}
+#uploadrequests-wrap div div p {
+   font: 14px "Raleway";
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+#uploadrequests-wrap div div p:before,#uploadrequests-wrap div div p:after {
+    display: none;
+}
+#uploadrequests-wrap button {
+    padding: 5px 20px;
+    border: 0;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: #fff;
+    border-radius: 4px;
+}
+#uploadrequests-wrap a {
+    font: 16px "Raleway";
+    color: #444;
+}
+
+#category-list-wrap #book-slider {
+    float: right;
+    width: 70%;
+}
+#category-list-wrap #book-slider li:nth-child(4n-2) {
+    margin-left: 0 !important;
+}
+
+
+
+
+@media (max-width:1024px) {
+    #category-list {
+        width: 100% !important;
+    }
+    #fullScreenSearch {
+        font-size: 35px !important;
+        width: initial !important;
+        margin-top: 3px !important;
+    }
+    #category-book-filter {
+        border: 0;
+        z-index: 100;
+        display: inline-block;
+        width: initial;
+        position: absolute;
+        cursor: pointer;
+        height: 40px;
+        transition: .3s;
+        overflow: hidden;
+        top: 84px;
+        left: 270px;
+    }
+    #category-book-filter p {
+        background-color: #f0f0f0;
+        display: inline-block;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 0;
+        margin: 0;
+        margin-left: 20px;
+    }
+    #category-book-filter ul {
+        background-color: #fff;
+        box-shadow: 0 10px 19px -10px #aaa;
+        transition: .3s;
+        overflow: hidden;
+    }
+    #category-book-filter p:after {
+        left: -20px;
+        top: 6px;
+        font-size: 19px;
+    }
+    #category-book-filter:hover {
+        height: 260px !important;
+    }
+    #category-book-filter button {
+        position: absolute;
+        display: none;
+        top: 190px;
+        left: 50%;
+        margin-left: -35px;
+    }
+    #category-book-filter:hover button {
+        display: block;
+    }
+    
+    .section-container ul li:nth-child(4n-2) {
+        margin-left: 0;
+    }
+    #notifications li {
+        padding-left: 50px !important;
+        width: calc(100% - 65px);
+    }
+    #category-list-wrap ul {
+        width: initial !important;
+    }
+}
+
+error {
+    font: 20px "Roboto";
+    color: #444;
+    text-align: center;
+    display: block;
+}
+
+article {
+    font: 16px "Raleway";
+}

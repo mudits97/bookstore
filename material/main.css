@@ -1,0 +1,457 @@
+* {
+    padding:0;
+    box-shadow: none;
+    outline: 0;
+    margin: 0;
+}
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#wrap {
+    width: 100%;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 0px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.w3-content {
+    margin-top: 0 !important;
+    overflow: hidden;
+    height: 480px;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+.w3-section {
+    position: relative;
+    overflow: hidden;
+}
+.w3-section img {
+    transition: ease-in-out .6s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-left: 100%;
+    width: 100% !important;;
+}
+.w3-section img.selectedSlide {
+    margin-left:0%;
+}
+
+
+.slider-nav-btn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    font: 40px "FontAwesome";
+}
+#slider-nav-left {
+
+}
+#slider-nav-right {
+    right: 0;
+}
+#slider-wrap {
+}
+#slider {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+#slider>p {
+    font: 25px "Roboto";
+    text-align: center;
+    padding: 40px 10px 20px;
+    margin-bottom: 25px;
+    color: #444;
+}
+#book-slider {
+    position: absolute;
+    left: 0;
+    transition: ease .3s;
+    top: 0;
+    width: 12200px;
+    margin-bottom: 40px;
+    list-style: none;
+}
+.book-slide {
+    transition: all ease .3s;
+}
+.book-slide.hideSlide {
+    margin-left: 0 !important;
+    border: 0 !important;
+    width: 0% !important;
+}
+#book-slider li {
+    transition: ease .3s;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    display: inline-block;
+    width: 220px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 10px 19px -15px #000;
+    margin-left: 50px;
+}
+#book-slider li img {
+    width: 100%;
+    height: 320px;
+}
+#book-slider li:hover div {
+    opacity: 1;
+}
+#book-slider li > div {
+    opacity: 0;
+    transition: .2s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333d;
+}
+#book-slider li div div {
+    box-shadow: 0 -10px 19px -10px #333;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+#book-slider li div h6 {
+    color: #333;
+    font: 18px "Roboto";
+    padding: 10px 10px 0px;
+}
+#book-slider li div p {
+    color: #555;
+    font: 14px "Roboto";
+    padding: 5px 10px;
+}
+#book-slider li div button {
+    margin: 10px auto 20px;
+    display: block;
+    color: #555;
+    cursor: pointer;
+    background-color: #eee;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    transition: .2s;
+    border-radius: 4px;
+}
+#book-slider li div button:hover {
+    background-color: #0077b5;
+    color: #fff;
+    box-shadow: 0 10px 19px -15px #000;
+}
+#book-slider-wrap {
+    max-width: 90%;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+
+
+
+#footer-wrap {
+    box-shadow: 0 -10px 19px -15px #999;
+}
+#footer {
+    margin: 0 auto;
+}
+#footer > div {
+    overflow: hidden;
+    padding: 20px;
+}
+#footer > div:last-child,#footer > div:first-child > div {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+#footer > div:last-child {
+    border-radius: 10px 10px 0 0;
+/*     box-shadow: 0 -10px 19px -15px #aaa; */
+    border: 1px solid #bbb;
+    background-color: #eee;
+}
+#footer img {
+    width: 70px;
+    height: 70px;
+    display: block;
+}
+#footer-follow {
+    float: right;
+}
+#footer > div > p {
+    padding: 5px 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+#footer-follow i {
+    vertical-align: top;
+    width: 30px;
+    margin-top: 1px;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+}
+#footer-follow i:hover {
+    color: #0077b5;
+}
+#footer-follow i::before {
+    font: 25px "FontAwesome";
+}
+#footer-follow span  {
+    display: inline-block;
+    padding: 5px;
+}
+#footer > div:first-child {
+    background-color: #fff;
+}
+#footer section {
+    display: inline-block;
+}
+#footer img {
+    margin: 20px 20px;
+    margin-right: 6px;
+    display: inline-block;
+}
+#footer section p {
+    display: inline-block;
+    font: 20px "Raleway";
+    font-weight: 600;
+    color: #444;
+}
+#footer>div>div>div {
+    display: inline-block;
+    float: right;
+}
+#footer-links {
+    text-align: right;
+    padding: 20px;
+}
+#footer-links p {
+    font: 16px "Roboto";
+    color: #444;
+    margin-left: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+#footer-links a:hover {
+    color: #222;
+}
+#footer-subscribe {
+    padding: 0 20px 20px;
+    text-align: right;
+}
+#footer-subscribe input {
+    padding: 4px 10px;
+    width: 300px;
+}
+
+#contact-wrap {
+    background: linear-gradient(-90deg,#0077b5 0%,#0077b5 70%,transparent 70%, transparent 100%);
+    background-color: #f0f0f0;
+}
+#contact {
+    position: relative;
+    padding-bottom: 50px;
+    max-width: 1300px;
+    margin:0 auto;
+}
+#contact > p {
+    position: absolute;
+    left: 25%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: -5px 5px 19px -14px #222;
+    font: 30px "Raleway";
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #777;
+    top: 40px;
+    text-align: center;
+    padding: 10px 20px;
+}
+#contact-section-wrap {
+    padding-top:120px;
+}
+#contact-section {
+    width: 49%;
+    vertical-align: top;
+    display: inline-block;
+}
+#contact-section:first-child {
+    width: 30%;
+    text-align:center;
+}
+#contact-section:last-child {
+    width: 55%;
+    margin-top: 50px;
+    margin-left: 7%;
+}
+.contact-methods h6 {
+    font: 16px "Raleway";
+}
+.contact-methods p {
+    color: #444;
+    font: 15px "Raleway";
+}
+.contact-methods {
+    text-align: center;
+    width: 300px;
+    margin: 0 auto 30px;
+}
+.contact-methods i {
+    font: 50px "FontAwesome";
+}
+.contact-methods p {
+    margin: 0;
+    padding: 0;
+}
+
+#contact-section form {
+    margin: 20px;
+    width: 100%;
+}
+#contact-section form input {
+    width: 45%;
+    padding: 10px 2%;
+    margin-right:7%;
+    margin-bottom: 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+#contact-section form input:nth-child(2n+2) {
+    margin-right: 0 !important;
+}
+#contact-section textarea {
+    width: 98%;
+    padding: 10px 2%;
+    height: 150px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+#contact-section button {
+    background-color: #fff;
+    color: #444;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    margin:  0 auto;
+    display: block;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 10px 19px -15px #333;
+}
+#contact-section button:hover {
+    box-shadow: 0 10px 19px -11px #333;
+}
+
+
+
+
+#userauth-wrap {
+    transition: all linear .1s;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+    background-color: #333a;
+}
+#userauth {
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    box-shadow: 0 10px 19px -10px #444;
+    margin-left: -175px;
+    width: 350px;
+    padding: 20px;
+}
+#userauth div {
+    margin-bottom: 35px;
+}
+#userauth div p {
+    transition: all linear .1s;
+    cursor: pointer;
+    color: #444;
+    font: 16px "Roboto";
+    display: inline-block;
+    margin-right: 10px;
+    line-height: 30px;
+    vertical-align: top;
+}
+#userauth div p.selected {
+    color: #0077b5;
+    font-size: 20px;
+}
+#userauth div p:first-child {
+    padding-right: 10px;
+    border-right: 2px solid #aaa;
+}
+#userauth input {
+    display: block;
+    padding: 8px 10px;
+    font: 16px "Raleway";
+    color: #555;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+#userauth button {
+    width: 100%;
+    display: block;
+    padding: 8px 10px;
+    font: 16px "Raleway";
+    background-color: #0077b5;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: linear .3s;
+    border: 1px solid #fff;
+    border-radius: 2px;
+}
+#userauth button:hover {
+    box-shadow: 0 10px 19px -15px #333;
+}
+#closeBtn {
+    background-color: #666 !important;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    cursor: pointer;
+    transition:  .1s;
+    padding: 0 !important;
+    width: 30px !important;
+    height: 30px;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 100% !important;
+}
+#closeBtn i {
+    font: 20px "FontAwesome";
+}
+#closeBtn:hover {
+    background-color: #0077b5 !important;
+    color: #fff;
+}
+#userauth-wrap.showAuthBox {
+/*     left: 0; */
+/*     width: 100%; */
+    height: 100%;
+}

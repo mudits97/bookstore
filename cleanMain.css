@@ -1,0 +1,314 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    overflow-x: hidden;
+}
+
+
+
+/* ------------- Header Ends Here ------------ */
+
+
+
+#main-slider {
+    position: relative;
+    height: 450px;
+    width: 100%;
+    overflow: hidden;
+}
+#main-slider:before {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: #000a;
+    display: block;
+    content: '';
+}
+#main-slider:after {
+    width: 700px;
+    position: absolute;
+    z-index: 101;
+    top: 50%;
+    margin-top: -30px;
+    left: 50%;
+    text-shadow: 1px 1px 1px #fff;
+    text-align: center;
+    margin-left: -350px;
+    display: block;
+    
+    font: 50px "Raleway";
+    color: #fff;
+}
+#main-slider p {
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+    top: 50%;
+    background-color: #0005;
+    padding: 5px;
+    border-radius: 10px;
+    font: 40px "Raleway";
+    color: #fff;
+}
+#main-slider .mySlides {
+    transition: all ease-in-out .3s;
+    position: absolute;
+    left: 100%;
+}
+#main-slider .mySlides.selectedSlide {
+    left: 0;
+}
+
+
+
+#slider-wrap {
+
+}
+#slider {
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto 50px;
+}
+#slider > p {
+    margin-bottom: 20px;
+    padding: 35px 10px 20px;
+    text-align: center;
+    font: 20px "Raleway";
+    font-weight: 600;
+    color: #444;
+}
+#slider > div {
+    margin: 0 60px;
+    padding:0  50px 0 0;
+    overflow: hidden;
+}
+#slider ul {
+    list-style: none;
+    height: 300px;
+    width: 12000px;
+    overflow: hidden;
+}
+#slider li {
+    cursor: pointer;
+    border: 1px solid #fff;
+    box-shadow: 0 10px 19px -10px #aaa;
+    position: relative;
+    margin-right: 60px;
+    overflow: hidden;
+    width: 170px;
+    display: inline-block;
+    transition: all linear .1s;
+}
+#slider li.hideSlide {
+    opacity: 0;
+    width: 0 !important;
+    margin-right: 0;
+}
+#slider li:hover {
+    box-shadow: 0 10px 19px -10px #666;
+}
+#slider li:hover > div {
+    height: 100%;
+}
+#slider li img {
+    width: 170px;
+    height: 250px;
+}
+#slider li > div {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition:  all ease-in-out .2s;
+    overflow: hidden;
+    width: 100%;
+    height: 0%;
+    background-color: #0003;
+}
+#slider li div div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+}
+#slider li button {
+    color: #fff;
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    width: 80%;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto 10px;
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+}
+#slider li h6 {
+    font: 15px "Roboto";
+    padding: 5px;
+}
+#slider li p {
+    color: #666;
+    font: 14px "Roboto";
+    padding: 5px;
+}
+#slider button i {
+    font-style: unset;
+}
+#slider .slider-nav-btn {
+    position: absolute;
+    font-style: unset !important;
+    top:50%;
+    margin-top: -20px;
+    left: -10px;
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    font: 60px "FontAwesome";
+}
+#slider-nav-right {
+    left: unset !important;
+    right:-10px !important;
+}
+
+
+
+
+
+
+
+#userauth-wrap {
+    transition: all linear .1s;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 0%;
+    z-index: 110;
+    overflow: hidden;
+    background-color: #333a;
+}
+#userauth {
+    border-radius: 10px;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    box-shadow: 0 10px 19px -10px #444;
+    margin-left: -175px;
+    width: 350px;
+    padding: 20px;
+}
+#userauth div {
+    margin-bottom: 35px;
+}
+#userauth div p {
+    transition: all linear .1s;
+    cursor: pointer;
+    color: #444;
+    font: 16px "Roboto";
+    display: inline-block;
+    margin-right: 10px;
+    line-height: 30px;
+    vertical-align: top;
+}
+#userauth div p.selected {
+    color: #625EB1;
+    font-size: 20px;
+}
+#userauth div p:first-child {
+    padding-right: 10px;
+    border-right: 2px solid #aaa;
+}
+#userauth input {
+    display: block;
+    padding: 10px 2%;
+    font: 16px "Raleway";
+    color: #555;
+    width: 96%;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+#userauth input:focus {
+    border-color:  #625EB1;
+}
+#userauth button {
+    width: 100%;
+    display: block;
+    padding: 10px 10px;
+    font: 16px "Raleway";
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: linear .3s;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+#userauth button:hover {
+    box-shadow: 0 10px 19px -15px #333;
+}
+#closeBtn {
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    cursor: pointer;
+    transition:  .1s;
+    padding: 0 !important;
+    width: 30px !important;
+    height: 30px;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 100% !important;
+}
+#closeBtn i {
+    font: 20px "FontAwesome";
+}
+#closeBtn:hover {
+    background-color: #f77062 !important;
+    color: #fff;
+}
+#userauth-wrap.showAuthBox {
+    height: 100%;
+}
+
+
+
+
+
+#donate-wrap {
+    background-color: #f0f0f0;
+}
+#donate {
+    padding: 30px 20px;
+    margin: 0 auto;
+    display: block;
+    width: 400px;
+    text-align: center;
+}
+#donate> p {
+    display: inline-block;
+    text-align: center;
+    font: 20px "Raleway";
+    color: #444;
+}
+#donate button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 0;
+    color: #fff;
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    border-radius: 5px;
+    margin-left: 30px;
+}
